@@ -4,8 +4,6 @@ import java.awt.geom.*;
 import javax.swing.JFrame;  
 import java.util.*;
 
-//tester for commit
-
 public class DisplayTriangles extends Canvas{  
     public static final int SIZE_CANVAS = 700;  
     private static final double TRIANGLE_HEIGHT = 443.0;
