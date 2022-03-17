@@ -71,6 +71,8 @@ public class DisplayForQuadTrees extends Canvas
         g.draw(new Line2D.Double(vertex1,vertex3));
     }
 
+
+    //tester line
     public Point2D.Double fromBaryCentricPoint(BaryCentricPoint p) {
         double x = 0.0;
         double y = 0.0;
