@@ -29,8 +29,9 @@ public class TrajectoryWithCurveBasedOnQuadTree extends Canvas
         //Point2D.Double point = new Point2D.Double(0.0,0.0);
         drawMainTriangle( g);
 
-    }  
-     public void drawMainTriangle(Graphics2D g) {
+    }
+
+    public void drawMainTriangle(Graphics2D g) {
        
         BaryCentricPoint p1 = fromCartesian(mainTriangle[0]);       
         BaryCentricPoint p2 = fromCartesian(mainTriangle[1]);        
@@ -51,6 +52,9 @@ public class TrajectoryWithCurveBasedOnQuadTree extends Canvas
         BaryCentricPoint startAndEnd = new BaryCentricPoint(0.5,0.0,0.5);
         Point2D.Double previous = fromBaryCentricPoint(startAndEnd);
         g.setColor(Color.RED);
+        //Line width method
+        // Hardcoded for now, 5x the width of the original line
+        g.setStroke(new BasicStroke((float) 5));
         for (BaryCentricPoint bcp : points) {
             Point2D.Double p = fromBaryCentricPoint(bcp);
             g.drawLine((int)previous.getX(),(int)previous.getY(),
